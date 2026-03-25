@@ -1,0 +1,4 @@
+interface:
+  display_name: "Dolphin Anty Public"
+  short_description: "Profiles, proxies, API, and portable OCLI"
+  default_prompt: "Use $dolphin-anty-public to operate Dolphin Anty profiles, proxies, API calls, and portable OCLI workflows from a public-safe skill folder."
