@@ -12,7 +12,7 @@
 
 # skills-dolphin-anty
 
-Public Dolphin Anty skill for AI agents.
+Public Dolphin Anty skill for AI agents working on Windows platform
 
 ## What It Can Do
 
