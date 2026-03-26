@@ -1,5 +1,5 @@
 ```text
-                            Yellow Web
+                            Dolphin Anty Skill
     _            __     __  _ _             __          __  _
    | |           \ \   / / | | |            \ \        / / | |
    | |__  _   _   \ \_/ /__| | | _____      _\ \  /\  / /__| |__
@@ -12,7 +12,7 @@
 
 # skills-dolphin-anty
 
-Public Dolphin Anty skill for Codex-style agents.
+Public Dolphin Anty skill for AI agents.
 
 ## What It Can Do
 
