@@ -41,14 +41,15 @@ Observed on a live machine:
 ## Command Examples
 
 - Authenticate local API:
-  - `pwsh -File .\scripts\dolphin-anty.ps1 -Command local-auth`
+  - `node ./scripts/dolphin-anty.js --command local-auth`
 - List running profiles:
-  - `pwsh -File .\scripts\dolphin-anty.ps1 -Command list-running-profiles`
+  - `node ./scripts/dolphin-anty.js --command list-running-profiles`
 - Start profile:
-  - `pwsh -File .\scripts\dolphin-anty.ps1 -Command start-profile -ProfileId "<id>"`
+  - `node ./scripts/dolphin-anty.js --command start-profile -ProfileId "<id>"`
 - Stop profile:
-  - `pwsh -File .\scripts\dolphin-anty.ps1 -Command stop-profile -ProfileId "<id>"`
+  - `node ./scripts/dolphin-anty.js --command stop-profile -ProfileId "<id>"`
 - Open URL in running profile:
-  - `pwsh -File .\scripts\dolphin-anty.ps1 -Command open-url -ProfileId "<id>" -Url "https://example.com"`
+  - `node ./scripts/dolphin-anty.js --command open-url -ProfileId "<id>" -Url "https://example.com"`
 - Raw local request:
-  - `pwsh -File .\scripts\dolphin-anty.ps1 -Command raw-local -Path "/browser_profiles/running"`
+  - `node ./scripts/dolphin-anty.js --command raw-local -Path "/browser_profiles/running"`
+

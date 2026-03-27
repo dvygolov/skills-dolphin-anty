@@ -23,18 +23,19 @@
 ## Commands
 
 - List homepages:
-  - `pwsh -File .\scripts\dolphin-anty.ps1 -Command list-homepages`
+  - `node ./scripts/dolphin-anty.js --command list-homepages`
 - Create homepages:
-  - `pwsh -File .\scripts\dolphin-anty.ps1 -Command create-homepages -Json '{"items":[{"title":"Main","url":"https://example.com"}]}'`
+  - `node ./scripts/dolphin-anty.js --command create-homepages -Json '{"items":[{"title":"Main","url":"https://example.com"}]}'`
 - Update homepage:
-  - `pwsh -File .\scripts\dolphin-anty.ps1 -Command update-homepage -HomepageId "<id>" -Json '{"title":"New"}'`
+  - `node ./scripts/dolphin-anty.js --command update-homepage -HomepageId "<id>" -Json '{"title":"New"}'`
 - Delete homepages:
-  - `pwsh -File .\scripts\dolphin-anty.ps1 -Command delete-homepages -Json '{"ids":[1,2]}'`
+  - `node ./scripts/dolphin-anty.js --command delete-homepages -Json '{"ids":[1,2]}'`
 - List bookmarks:
-  - `pwsh -File .\scripts\dolphin-anty.ps1 -Command list-bookmarks`
+  - `node ./scripts/dolphin-anty.js --command list-bookmarks`
 - Create bookmark:
-  - `pwsh -File .\scripts\dolphin-anty.ps1 -Command create-bookmark -Json '{"title":"Docs","url":"https://example.com"}'`
+  - `node ./scripts/dolphin-anty.js --command create-bookmark -Json '{"title":"Docs","url":"https://example.com"}'`
 - Update bookmark:
-  - `pwsh -File .\scripts\dolphin-anty.ps1 -Command update-bookmark -BookmarkId "<id>" -Json '{"title":"Docs 2"}'`
+  - `node ./scripts/dolphin-anty.js --command update-bookmark -BookmarkId "<id>" -Json '{"title":"Docs 2"}'`
 - Delete bookmarks:
-  - `pwsh -File .\scripts\dolphin-anty.ps1 -Command delete-bookmarks -Json '{"ids":[1,2]}'`
+  - `node ./scripts/dolphin-anty.js --command delete-bookmarks -Json '{"ids":[1,2]}'`
+

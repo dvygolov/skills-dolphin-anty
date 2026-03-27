@@ -8,7 +8,7 @@
 
 ## Coverage
 
-Cloud `browser_profiles/statuses*` coverage in `scripts/dolphin-anty.ps1`:
+Cloud `browser_profiles/statuses*` coverage in `scripts/dolphin-anty.js`:
 
 - `list-profile-statuses`
 - `get-profile-status`
@@ -21,22 +21,23 @@ Cloud `browser_profiles/statuses*` coverage in `scripts/dolphin-anty.ps1`:
 ## Commands
 
 - List statuses:
-  - `pwsh -File .\scripts\dolphin-anty.ps1 -Command list-profile-statuses -Limit 50`
+  - `node ./scripts/dolphin-anty.js --command list-profile-statuses -Limit 50`
 - Get one status:
-  - `pwsh -File .\scripts\dolphin-anty.ps1 -Command get-profile-status -ProfileStatusId "<id>"`
+  - `node ./scripts/dolphin-anty.js --command get-profile-status -ProfileStatusId "<id>"`
 - Create status:
-  - `pwsh -File .\scripts\dolphin-anty.ps1 -Command create-profile-status -Json '{"name":"In Progress","color":"green"}'`
+  - `node ./scripts/dolphin-anty.js --command create-profile-status -Json '{"name":"In Progress","color":"green"}'`
 - Update status:
-  - `pwsh -File .\scripts\dolphin-anty.ps1 -Command update-profile-status -ProfileStatusId "<id>" -Set "name=Ready"`
+  - `node ./scripts/dolphin-anty.js --command update-profile-status -ProfileStatusId "<id>" -Set "name=Ready"`
 - Delete status:
-  - `pwsh -File .\scripts\dolphin-anty.ps1 -Command delete-profile-status -ProfileStatusId "<id>"`
+  - `node ./scripts/dolphin-anty.js --command delete-profile-status -ProfileStatusId "<id>"`
 - Bulk delete statuses:
-  - `pwsh -File .\scripts\dolphin-anty.ps1 -Command bulk-delete-profile-statuses -Json '{"ids":[42,43]}'`
+  - `node ./scripts/dolphin-anty.js --command bulk-delete-profile-statuses -Json '{"ids":[42,43]}'`
 - Bulk assign/change status:
-  - `pwsh -File .\scripts\dolphin-anty.ps1 -Command bulk-change-profile-statuses -Json '{"ids":[123,124],"status":{"id":42}}'`
+  - `node ./scripts/dolphin-anty.js --command bulk-change-profile-statuses -Json '{"ids":[123,124],"status":{"id":42}}'`
 
 ## Payload Guidance
 
 - For create/update of one status, `-Set` is fine for flat fields
 - For bulk status changes, use `-Json`
 - If you need the exact backend schema, open `references/dolphinanty-public-api.json`
+

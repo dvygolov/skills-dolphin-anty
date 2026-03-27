@@ -17,22 +17,22 @@ Protected local endpoints require header `X-Anty-Session-Token`.
 
 Use:
 
-- `pwsh -File .\scripts\get-local-session-token.ps1`
+- `node ./scripts/get-local-session-token.js`
 
 What it does:
 
-- scans `%APPDATA%\dolphin_anty\Session Storage`
+- scans the default Dolphin `Session Storage` directory for the current platform, or `DOLPHIN_ANTY_SESSION_STORAGE_DIR` when provided
 - extracts `map-<n>-sessionToken` candidates
 - validates candidates against a protected local endpoint
-- writes the winning token to `.runtime\local-session-token.txt`
+- writes the winning token to `.runtime/local-session-token.txt`
 
 ## Cache Behavior
 
-`scripts/dolphin-anty.ps1` loads `LocalSessionToken` from:
+`scripts/dolphin-anty.js` loads `LocalSessionToken` from:
 
-1. `-LocalSessionToken`
+1. `--local-session-token`
 2. `DOLPHIN_ANTY_LOCAL_SESSION_TOKEN`
-3. `.runtime\local-session-token.txt`
+3. `.runtime/local-session-token.txt`
 
 Refresh the cache when:
 
@@ -47,3 +47,4 @@ If token recovery fails:
 - do not call protected local endpoints
 - tell the user the action is blocked by missing `LocalSessionToken`
 - for proxy checks, explicitly say verification is unavailable until token recovery succeeds
+

@@ -9,7 +9,7 @@
 
 ## Coverage
 
-Cloud `browser_profiles*` coverage in `scripts/dolphin-anty.ps1`:
+Cloud `browser_profiles*` coverage in `scripts/dolphin-anty.js`:
 
 - `list-profiles`
 - `create-profile`
@@ -25,25 +25,25 @@ Cloud `browser_profiles*` coverage in `scripts/dolphin-anty.ps1`:
 ## Commands
 
 - Find profiles:
-  - `pwsh -File .\scripts\dolphin-anty.ps1 -Command list-profiles -Query "shop-us"`
+  - `node ./scripts/dolphin-anty.js --command list-profiles -Query "shop-us"`
 - Create profile:
-  - `pwsh -File .\scripts\dolphin-anty.ps1 -Command create-profile -Json '{"name":"QA Profile","platform":"windows","browserType":"anty"}'`
+  - `node ./scripts/dolphin-anty.js --command create-profile -Json '{"name":"QA Profile","platform":"windows","browserType":"anty"}'`
 - Get profile:
-  - `pwsh -File .\scripts\dolphin-anty.ps1 -Command get-profile -ProfileId "<id>"`
+  - `node ./scripts/dolphin-anty.js --command get-profile -ProfileId "<id>"`
 - Update profile:
-  - `pwsh -File .\scripts\dolphin-anty.ps1 -Command update-profile -ProfileId "<id>" -Set "name=New Name"`
+  - `node ./scripts/dolphin-anty.js --command update-profile -ProfileId "<id>" -Set "name=New Name"`
 - Delete profile:
-  - `pwsh -File .\scripts\dolphin-anty.ps1 -Command delete-profile -ProfileId "<id>"`
+  - `node ./scripts/dolphin-anty.js --command delete-profile -ProfileId "<id>"`
 - Bulk create:
-  - `pwsh -File .\scripts\dolphin-anty.ps1 -Command bulk-create-profiles -Json '{"items":[{"name":"QA-1"},{"name":"QA-2"}]}'`
+  - `node ./scripts/dolphin-anty.js --command bulk-create-profiles -Json '{"items":[{"name":"QA-1"},{"name":"QA-2"}]}'`
 - Bulk delete:
-  - `pwsh -File .\scripts\dolphin-anty.ps1 -Command bulk-delete-profiles -Json '{"ids":[123,124]}'`
+  - `node ./scripts/dolphin-anty.js --command bulk-delete-profiles -Json '{"ids":[123,124]}'`
 - Transfer:
-  - `pwsh -File .\scripts\dolphin-anty.ps1 -Command transfer-profiles -Json '{"ids":[123],"userId":999}'`
+  - `node ./scripts/dolphin-anty.js --command transfer-profiles -Json '{"ids":[123],"userId":999}'`
 - Share one profile:
-  - `pwsh -File .\scripts\dolphin-anty.ps1 -Command share-profile-access -ProfileId "<id>" -Json '{"userIds":[999]}'`
+  - `node ./scripts/dolphin-anty.js --command share-profile-access -ProfileId "<id>" -Json '{"userIds":[999]}'`
 - Share multiple profiles:
-  - `pwsh -File .\scripts\dolphin-anty.ps1 -Command share-profiles-access -Json '{"browserProfileIds":[123,124],"userIds":[999]}'`
+  - `node ./scripts/dolphin-anty.js --command share-profiles-access -Json '{"browserProfileIds":[123,124],"userIds":[999]}'`
 
 ## Common Payload Pattern
 
@@ -55,3 +55,4 @@ Cloud `browser_profiles*` coverage in `scripts/dolphin-anty.ps1`:
 
 - Exact schema lookup: `references/dolphinanty-public-api.json`
 - Unwrapped endpoint fallback: `raw-cloud`
+
