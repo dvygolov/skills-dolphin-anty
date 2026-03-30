@@ -10,7 +10,7 @@
           |___/             https://yellowweb.top
 ```
 
-# skills-dolphin-anty
+# dolphin-anty-public
 
 Public Dolphin Anty skill for AI agents. The skill is now built around a cross-platform Node.js runtime instead of PowerShell-only wrappers.
 
