@@ -1,4 +1,6 @@
-```text
+`$([Environment]::NewLine)
+[Support this project](https://yellowweb.top/donate)
+text
                             Dolphin Anty Skill
     _            __     __  _ _             __          __  _
    | |           \ \   / / | | |            \ \        / / | |
@@ -8,7 +10,9 @@
    |_.__/ \__, |    |_|\___|_|_|\___/ \_/\_/    \/  \/ \___|_.__/
            __/ |
           |___/             https://yellowweb.top
-```
+`$([Environment]::NewLine)
+[Support this project](https://yellowweb.top/donate)
+
 
 # dolphin-anty-public
 
@@ -50,15 +54,23 @@ Practical requirements by feature:
 2. Put your Dolphin API token into `dolphin-anty-api-token.txt` in the skill root, or export `DOLPHIN_ANTY_TOKEN`.
 3. If you will use local protected endpoints, run:
 
-```bash
+`$([Environment]::NewLine)
+[Support this project](https://yellowweb.top/donate)
+bash
 node ./scripts/get-local-session-token.js
-```
+`$([Environment]::NewLine)
+[Support this project](https://yellowweb.top/donate)
+
 
 4. If you will use portable OCLI, run:
 
-```bash
+`$([Environment]::NewLine)
+[Support this project](https://yellowweb.top/donate)
+bash
 node ./scripts/bootstrap.js
-```
+`$([Environment]::NewLine)
+[Support this project](https://yellowweb.top/donate)
+
 
 The skill stores generated runtime state only in `.runtime/`. That directory is machine-local and intentionally not tracked.
 
@@ -66,35 +78,55 @@ The skill stores generated runtime state only in `.runtime/`. That directory is 
 
 List profiles:
 
-```bash
+`$([Environment]::NewLine)
+[Support this project](https://yellowweb.top/donate)
+bash
 node ./scripts/dolphin-anty.js --command list-profiles --limit 50
-```
+`$([Environment]::NewLine)
+[Support this project](https://yellowweb.top/donate)
+
 
 List proxies:
 
-```bash
+`$([Environment]::NewLine)
+[Support this project](https://yellowweb.top/donate)
+bash
 node ./scripts/dolphin-anty.js --command list-proxies --limit 50
-```
+`$([Environment]::NewLine)
+[Support this project](https://yellowweb.top/donate)
+
 
 Check a proxy through local API:
 
-```bash
+`$([Environment]::NewLine)
+[Support this project](https://yellowweb.top/donate)
+bash
 node ./scripts/get-local-session-token.js
 node ./scripts/dolphin-anty.js --command check-proxy --proxy-id 123456
-```
+`$([Environment]::NewLine)
+[Support this project](https://yellowweb.top/donate)
+
 
 Start a profile and open a page:
 
-```bash
+`$([Environment]::NewLine)
+[Support this project](https://yellowweb.top/donate)
+bash
 node ./scripts/dolphin-anty.js --command open-url --profile-name "My Profile" --url "https://iphey.com/"
-```
+`$([Environment]::NewLine)
+[Support this project](https://yellowweb.top/donate)
+
 
 Use portable OCLI:
 
-```bash
+`$([Environment]::NewLine)
+[Support this project](https://yellowweb.top/donate)
+bash
 node ./scripts/bootstrap.js
 node ./scripts/dolphin-ocli.js browser_profiles_get --limit 5
-```
+`$([Environment]::NewLine)
+[Support this project](https://yellowweb.top/donate)
+
 
 ## Structure
 
